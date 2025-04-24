@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:Atomic}",
+            "name": "Debug Atomic",
+            "program": "${workspaceFolder:Atomic}/.build/debug/Atomic",
+            "preLaunchTask": "swift: Build Debug Atomic"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:Atomic}",
+            "name": "Release Atomic",
+            "program": "${workspaceFolder:Atomic}/.build/release/Atomic",
+            "preLaunchTask": "swift: Build Release Atomic"
+        }
+    ]
+}
