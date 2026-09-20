@@ -188,14 +188,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A70C0000000000000000005A /* FourLaws.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70C0000000000000000003A /* FourLaws.swift */; };
-		A70C0000000000000000005B /* CueTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70C0000000000000000003B /* CueTools.swift */; };
-		A70C0000000000000000005C /* CravingTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70C0000000000000000003C /* CravingTools.swift */; };
-		A70C0000000000000000005D /* ResponseTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70C0000000000000000003D /* ResponseTools.swift */; };
-		A70C0000000000000000005E /* RewardTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70C0000000000000000003E /* RewardTools.swift */; };
-		A70C0000000000000000005F /* Mastery.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70C0000000000000000003F /* Mastery.swift */; };
-		A70C00000000000000000061 /* Playbook.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70C00000000000000000060 /* Playbook.swift */; };
-		A70C00000000000000000051 /* Assets.xcassets in Resources */,
+				A70C00000000000000000051 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

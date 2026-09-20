@@ -119,9 +119,15 @@ public struct HabitStack: Equatable, Sendable, Identifiable {
     }
 
     /// Chains a run of habits so each one becomes the cue for the next.
-    public static func chain(_ habits: [String]) -> [HabitStack] {
-        guard habits.count > 1 else { return [] }
-        return zip(habits, habits.dropFirst()).map { HabitStack(anchor: $0, newHabit: $1) }
+    ///
+    /// - Parameter actions: bare actions — "wake up", "make coffee" — since each one
+    ///   is read twice: once as the thing you will do, and once, with "I" in front of
+    ///   it, as the anchor for what follows.
+    public static func chain(_ actions: [String]) -> [HabitStack] {
+        guard actions.count > 1 else { return [] }
+        return zip(actions, actions.dropFirst()).map { previous, next in
+            HabitStack(anchor: "I \(previous)", newHabit: next)
+        }
     }
 }
 

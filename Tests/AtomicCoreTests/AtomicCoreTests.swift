@@ -432,10 +432,12 @@ final class CueToolTests: XCTestCase {
     }
 
     func testStackingChainsEachHabitOntoTheLast() {
-        let stacks = HabitStack.chain(["I wake up", "I make coffee", "I read one page"])
+        // Bare actions in; each one reads as the deed once and as the anchor once.
+        let stacks = HabitStack.chain(["wake up", "make coffee", "read one page"])
 
         XCTAssertEqual(stacks.count, 2)
         XCTAssertEqual(stacks.first?.sentence, "After I wake up, I will make coffee.")
+        XCTAssertEqual(stacks.last?.sentence, "After I make coffee, I will read one page.")
         XCTAssertEqual(stacks.last?.anchor, "I make coffee")
         XCTAssertTrue(HabitStack.chain(["Only one"]).isEmpty)
     }
