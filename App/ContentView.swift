@@ -50,7 +50,7 @@ struct DashboardView: View {
                 }
             }
             .navigationTitle("AtomicBreak")
-            .refreshable { await model.refresh() }
+            .refreshable { model.refresh() }
         }
     }
 }
