@@ -75,6 +75,16 @@ public final class CueManager {
         ]
     }
 
+    /// Arms extra times — the ones the user wrote into their implementation
+    /// intentions. A plan the user made beats a pattern we inferred.
+    public func addTriggerTimes(_ times: [String]) {
+        for time in times where !allTriggerTimes.contains(time) {
+            allTriggerTimes.append(time)
+        }
+        allTriggerTimes.sort()
+        triggerTimes = allTriggerTimes
+    }
+
     public func shouldTrigger(at minuteOfDay: String) -> Bool {
         triggerTimes.contains(minuteOfDay)
     }

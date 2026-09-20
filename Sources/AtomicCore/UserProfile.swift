@@ -6,21 +6,18 @@ public final class UserProfile {
     public var targetApps: [String]
     public var dailyTimeLimits: [String: Int]
     public var replacementActivities: [String]
-    public var implementationIntentions: [String]
     public private(set) var progressHistory: [String: [String: Int]] = [:]
 
     public init(
         name: String = "",
         targetApps: [String] = [],
         dailyTimeLimits: [String: Int] = [:],
-        replacementActivities: [String] = [],
-        implementationIntentions: [String] = []
+        replacementActivities: [String] = []
     ) {
         self.name = name
         self.targetApps = targetApps
         self.dailyTimeLimits = dailyTimeLimits
         self.replacementActivities = replacementActivities
-        self.implementationIntentions = implementationIntentions
     }
 
     /// The starter profile used until the onboarding flow exists.
@@ -29,11 +26,7 @@ public final class UserProfile {
             name: "User",
             targetApps: ["Instagram", "Facebook", "TikTok"],
             dailyTimeLimits: ["Instagram": 30, "Facebook": 20, "TikTok": 15],
-            replacementActivities: ["Reading", "Walking", "Meditation"],
-            implementationIntentions: [
-                "When I feel bored, I will read instead of opening Instagram",
-                "After lunch, I will take a 10-minute walk instead of checking Facebook"
-            ]
+            replacementActivities: ["Reading", "Walking", "Meditation"]
         )
     }
 

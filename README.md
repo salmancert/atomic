@@ -6,14 +6,48 @@ that trigger them, and get nudged at the moments that matter.
 
 | | |
 |---|---|
-| **Dashboard** | Today's minutes against each app's limit, plus points and streaks |
-| **Habits** | Implementation intentions and the replacement activities to reach for |
-| **Settings** | Limits, and a way to try each of the four interventions |
+| **Today** | Minutes against each limit, the chain, and the votes today cast for your identity |
+| **Scorecard** | What you already do each day, marked +, = or − |
+| **Plan** | All 21 tools, filed under the law each one serves |
+| **Review** | The reflection log and an integrity report of what the record actually says |
+| **Settings** | Limits, the habit contract, and the replacement activities |
+
+## The toolkit
+
+Every tool from the book is implemented, filed under the stage of the habit loop it
+acts on. The laws are stated here inverted, because this app breaks a habit rather
+than builds one — `HabitStage.buildingLaw` gives the other direction.
+
+| Law | Tools |
+|---|---|
+| **1. Make it invisible** *(cue)* | Habits Scorecard · Implementation Intentions · Habit Stacking · Environment Design · Pointing and Calling |
+| **2. Make it unattractive** *(craving)* | Temptation Bundling · Motivation Ritual · Reframing · Social Circle — the close, the many, the powerful |
+| **3. Make it difficult** *(response)* | Two-Minute Rule · Law of Least Effort · Commitment Devices · One-Time Actions |
+| **4. Make it unsatisfying** *(reward)* | Habit Tracker · Never Miss Twice · Reinforcement · Habit Contract · Accountability Partner |
+| **Beyond the four laws** | Identity Votes · Goldilocks Rule · Reflection and Review |
+
+Sixteen of them are things you write down, and live in `Playbook`. The other five run
+off live data in the engine:
+
+- **Habit Tracker** and **Never Miss Twice** read the day-by-day chain. One miss is an
+  accident; a second in a row raises an alert and offers the two-minute version.
+- **Identity Votes** counts each app that stayed under its limit as a vote for the
+  person you said you wanted to be, and names the habit voting against you most.
+- **Goldilocks Rule** watches the last seven days and offers a new limit when one
+  stops being just manageable — tighter when it is never missed, looser when it is
+  missed every day. Limits only move when you accept the suggestion.
+- **Reflection and Review** keeps the log and produces the integrity report.
+
+The nudges are the same four laws, in order, and each one is written from your own
+plan rather than generic advice: the first names the app and the minutes out loud, the
+second prices the scroll against something you wanted, the third stalls the opening and
+offers your two-minute alternative, and the fourth shows the chain it is about to break
+and the vote it is about to cast.
 
 ## Layout
 
 ```
-Sources/AtomicCore/   The habit engine. Pure Foundation — no UIKit, no CoreLocation.
+Sources/AtomicCore/   The habit engine and the toolkit. Pure Foundation.
 Sources/AtomicDemo/   A terminal walkthrough of one day in the loop.
 App/                  The iOS app: SwiftUI views, app delegate, platform services.
 Tests/                Tests for the engine.
@@ -81,7 +115,9 @@ changes at all.
 ## Known gaps
 
 - **No persistence.** Points, streaks and history live in memory and reset on relaunch.
-- **No onboarding.** The profile is `UserProfile.sample()`; target apps and limits are
-  not yet editable in the UI.
+- **No onboarding.** The profile is `UserProfile.sample()` and the plan is
+  `Playbook.sample()` — a worked example aimed at phone use. The Plan tab shows the
+  toolkit but does not yet let you edit it; the scorecard, intentions, stacks and
+  contract are all writable from code today.
 - **Interventions are notifications only.** Actually adding friction in front of another
   app requires the Screen Time shield APIs, and so the same entitlement.

@@ -8,6 +8,11 @@ public final class HabitTracker {
     public private(set) var problemApps: [String: AppUsageSummary] = [:]
     public private(set) var usageData: [String: [String: Int]] = [:]
     public private(set) var streaks: [String: Int] = [:]
+    public private(set) var bestStreaks: [String: Int] = [:]
+
+    /// day -> app -> did the user stay under the limit. The record the habit tracker
+    /// and the never-miss-twice rule both read from.
+    public private(set) var results: [String: [String: Bool]] = [:]
 
     public init(
         usageSource: UsageDataSource = SampleUsageDataSource(),
@@ -57,7 +62,40 @@ public final class HabitTracker {
         let usage = usageData[day] ?? [:]
         for (app, limit) in limits {
             let minutes = usage[app] ?? 0
-            streaks[app] = minutes <= limit ? (streaks[app] ?? 0) + 1 : 0
+            let stayedUnder = minutes <= limit
+
+            results[day, default: [:]][app] = stayedUnder
+            streaks[app] = stayedUnder ? (streaks[app] ?? 0) + 1 : 0
+            bestStreaks[app] = max(bestStreaks[app] ?? 0, streaks[app] ?? 0)
         }
+    }
+
+    /// The recorded days, oldest first. `yyyy-MM-dd` sorts chronologically.
+    public var recordedDays: [String] {
+        results.keys.sorted()
+    }
+
+    /// The last `days` days of usage for one app, oldest first — what the Goldilocks
+    /// rule reads to decide whether a limit is pitched right.
+    public func recentUsage(for app: String, days: Int = 7) -> [Int] {
+        usageData.keys.sorted().suffix(days).map { usageData[$0]?[app] ?? 0 }
+    }
+
+    /// Missing once is an accident; missing twice starts a new habit.
+    public func chainStatus(for app: String) -> ChainStatus {
+        let recent = recordedDays.suffix(2).compactMap { results[$0]?[app] }
+        let missedLastDay = recent.last == false
+        let missedTwice = recent.count == 2 && recent.allSatisfy { $0 == false }
+
+        return ChainStatus(
+            habit: app,
+            streak: streaks[app] ?? 0,
+            missedLastDay: missedLastDay,
+            missedTwice: missedTwice
+        )
+    }
+
+    public func bestChain() -> Int {
+        bestStreaks.values.max() ?? 0
     }
 }
