@@ -5,18 +5,18 @@
             "request": "launch",
             "args": [],
             "cwd": "${workspaceFolder:Atomic}",
-            "name": "Debug Atomic",
-            "program": "${workspaceFolder:Atomic}/.build/debug/Atomic",
-            "preLaunchTask": "swift: Build Debug Atomic"
+            "name": "Debug AtomicDemo",
+            "program": "${workspaceFolder:Atomic}/.build/debug/AtomicDemo",
+            "preLaunchTask": "swift: Build Debug AtomicDemo"
         },
         {
             "type": "swift",
             "request": "launch",
             "args": [],
             "cwd": "${workspaceFolder:Atomic}",
-            "name": "Release Atomic",
-            "program": "${workspaceFolder:Atomic}/.build/release/Atomic",
-            "preLaunchTask": "swift: Build Release Atomic"
+            "name": "Release AtomicDemo",
+            "program": "${workspaceFolder:Atomic}/.build/release/AtomicDemo",
+            "preLaunchTask": "swift: Build Release AtomicDemo"
         }
     ]
 }

@@ -1,0 +1,50 @@
+name: Build
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  core:
+    name: Habit engine (SwiftPM)
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Show toolchain
+        run: swift --version
+
+      - name: Build
+        run: swift build
+
+      - name: Test
+        run: swift test
+
+      - name: Run the demo
+        run: swift run AtomicDemo
+
+  ipa:
+    name: iOS app (.ipa)
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Show toolchain
+        run: xcodebuild -version
+
+      # Unsigned: GitHub's runners hold no signing identity. Sideloading tools
+      # (AltStore, Sideloadly, ESign) re-sign with the user's own Apple ID.
+      - name: Build unsigned .ipa
+        run: ./Scripts/build-ipa.sh
+
+      - name: Upload .ipa
+        uses: actions/upload-artifact@v4
+        with:
+          name: AtomicBreak-unsigned-ipa
+          path: build/Atomic-unsigned.ipa
+          if-no-files-found: error

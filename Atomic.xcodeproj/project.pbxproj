@@ -1,0 +1,328 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A70C00000000000000000040 /* AtomicApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70C00000000000000000020 /* AtomicApp.swift */; };
+		A70C00000000000000000041 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70C00000000000000000021 /* AppDelegate.swift */; };
+		A70C00000000000000000042 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70C00000000000000000022 /* AppModel.swift */; };
+		A70C00000000000000000043 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70C00000000000000000023 /* ContentView.swift */; };
+		A70C00000000000000000044 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70C00000000000000000024 /* NotificationService.swift */; };
+		A70C00000000000000000045 /* LocationMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70C00000000000000000025 /* LocationMonitor.swift */; };
+		A70C00000000000000000046 /* AtomicBreakEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70C00000000000000000030 /* AtomicBreakEngine.swift */; };
+		A70C00000000000000000047 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70C00000000000000000031 /* UserProfile.swift */; };
+		A70C00000000000000000048 /* HabitTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70C00000000000000000032 /* HabitTracker.swift */; };
+		A70C00000000000000000049 /* CueManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70C00000000000000000033 /* CueManager.swift */; };
+		A70C0000000000000000004A /* RewardSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70C00000000000000000034 /* RewardSystem.swift */; };
+		A70C0000000000000000004B /* InterventionSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70C00000000000000000035 /* InterventionSystem.swift */; };
+		A70C0000000000000000004C /* UsageDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70C00000000000000000036 /* UsageDataSource.swift */; };
+		A70C0000000000000000004D /* Notifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70C00000000000000000037 /* Notifier.swift */; };
+		A70C0000000000000000004E /* DateProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70C00000000000000000038 /* DateProvider.swift */; };
+		A70C0000000000000000004F /* Geo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70C00000000000000000039 /* Geo.swift */; };
+		A70C00000000000000000051 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A70C00000000000000000050 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A70C00000000000000000005 /* Atomic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Atomic.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A70C00000000000000000020 /* AtomicApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtomicApp.swift; sourceTree = "<group>"; };
+		A70C00000000000000000021 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A70C00000000000000000022 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		A70C00000000000000000023 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A70C00000000000000000024 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		A70C00000000000000000025 /* LocationMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMonitor.swift; sourceTree = "<group>"; };
+		A70C00000000000000000030 /* AtomicBreakEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtomicBreakEngine.swift; sourceTree = "<group>"; };
+		A70C00000000000000000031 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		A70C00000000000000000032 /* HabitTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitTracker.swift; sourceTree = "<group>"; };
+		A70C00000000000000000033 /* CueManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CueManager.swift; sourceTree = "<group>"; };
+		A70C00000000000000000034 /* RewardSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardSystem.swift; sourceTree = "<group>"; };
+		A70C00000000000000000035 /* InterventionSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterventionSystem.swift; sourceTree = "<group>"; };
+		A70C00000000000000000036 /* UsageDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageDataSource.swift; sourceTree = "<group>"; };
+		A70C00000000000000000037 /* Notifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifier.swift; sourceTree = "<group>"; };
+		A70C00000000000000000038 /* DateProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateProvider.swift; sourceTree = "<group>"; };
+		A70C00000000000000000039 /* Geo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Geo.swift; sourceTree = "<group>"; };
+		A70C00000000000000000050 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A70C00000000000000000052 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A70C00000000000000000007 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A70C00000000000000000002 = {
+			isa = PBXGroup;
+			children = (
+				A70C00000000000000000010 /* App */,
+				A70C00000000000000000011 /* AtomicCore */,
+				A70C00000000000000000003 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A70C00000000000000000003 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A70C00000000000000000005 /* Atomic.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A70C00000000000000000010 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A70C00000000000000000020 /* AtomicApp.swift */,
+				A70C00000000000000000021 /* AppDelegate.swift */,
+				A70C00000000000000000022 /* AppModel.swift */,
+				A70C00000000000000000023 /* ContentView.swift */,
+				A70C00000000000000000024 /* NotificationService.swift */,
+				A70C00000000000000000025 /* LocationMonitor.swift */,
+				A70C00000000000000000050 /* Assets.xcassets */,
+				A70C00000000000000000052 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		A70C00000000000000000011 /* AtomicCore */ = {
+			isa = PBXGroup;
+			children = (
+				A70C00000000000000000030 /* AtomicBreakEngine.swift */,
+				A70C00000000000000000031 /* UserProfile.swift */,
+				A70C00000000000000000032 /* HabitTracker.swift */,
+				A70C00000000000000000033 /* CueManager.swift */,
+				A70C00000000000000000034 /* RewardSystem.swift */,
+				A70C00000000000000000035 /* InterventionSystem.swift */,
+				A70C00000000000000000036 /* UsageDataSource.swift */,
+				A70C00000000000000000037 /* Notifier.swift */,
+				A70C00000000000000000038 /* DateProvider.swift */,
+				A70C00000000000000000039 /* Geo.swift */,
+			);
+			name = AtomicCore;
+			path = Sources/AtomicCore;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A70C00000000000000000004 /* Atomic */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A70C0000000000000000000A /* Build configuration list for PBXNativeTarget "Atomic" */;
+			buildPhases = (
+				A70C00000000000000000006 /* Sources */,
+				A70C00000000000000000007 /* Frameworks */,
+				A70C00000000000000000008 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Atomic;
+			productName = Atomic;
+			productReference = A70C00000000000000000005 /* Atomic.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A70C00000000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					A70C00000000000000000004 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = A70C00000000000000000009 /* Build configuration list for PBXProject "Atomic" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A70C00000000000000000002;
+			productRefGroup = A70C00000000000000000003 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A70C00000000000000000004 /* Atomic */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A70C00000000000000000008 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A70C00000000000000000051 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A70C00000000000000000006 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A70C00000000000000000040 /* AtomicApp.swift in Sources */,
+				A70C00000000000000000041 /* AppDelegate.swift in Sources */,
+				A70C00000000000000000042 /* AppModel.swift in Sources */,
+				A70C00000000000000000043 /* ContentView.swift in Sources */,
+				A70C00000000000000000044 /* NotificationService.swift in Sources */,
+				A70C00000000000000000045 /* LocationMonitor.swift in Sources */,
+				A70C00000000000000000046 /* AtomicBreakEngine.swift in Sources */,
+				A70C00000000000000000047 /* UserProfile.swift in Sources */,
+				A70C00000000000000000048 /* HabitTracker.swift in Sources */,
+				A70C00000000000000000049 /* CueManager.swift in Sources */,
+				A70C0000000000000000004A /* RewardSystem.swift in Sources */,
+				A70C0000000000000000004B /* InterventionSystem.swift in Sources */,
+				A70C0000000000000000004C /* UsageDataSource.swift in Sources */,
+				A70C0000000000000000004D /* Notifier.swift in Sources */,
+				A70C0000000000000000004E /* DateProvider.swift in Sources */,
+				A70C0000000000000000004F /* Geo.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A70C0000000000000000000B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		A70C0000000000000000000C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A70C0000000000000000000D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = App/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.salmancert.atomicbreak;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A70C0000000000000000000E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = App/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.salmancert.atomicbreak;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A70C00000000000000000009 /* Build configuration list for PBXProject "Atomic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A70C0000000000000000000B /* Debug */,
+				A70C0000000000000000000C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A70C0000000000000000000A /* Build configuration list for PBXNativeTarget "Atomic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A70C0000000000000000000D /* Debug */,
+				A70C0000000000000000000E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A70C00000000000000000001 /* Project object */;
+}
